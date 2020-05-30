@@ -15,12 +15,14 @@ export default function App() {
     setIsAddMode(false);
   };
 
+  // removing goals from list of active goals
   const removeGoalHandler = goalId => {
     setCourseGoals(currentGoals => {
       return currentGoals.filter((goal) => goal.id !== goalId); // only keeping IDs that doesn't match goalId
     });
   };
 
+  // assigning goal to completed goals
   const markHandler = (goalId) => {
     let goalToMark = courseGoals.find((goal) => goal.id === goalId)
     setMarkedGoals(currentMarkedGoals => [...currentMarkedGoals, goalToMark]);
