@@ -1,13 +1,13 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
-const GoalItem = props => {
+const MarkedItem = props => {
     return (
-        <TouchableOpacity onPress={props.onMark.bind(this, props.id)} activeOpacity={0.8} onLongPress={props.onDelete.bind(this, props.id)} >
+        <View>
         <View style={styles.listItem}>
         <Text>{props.title}</Text>
         </View>
-        </TouchableOpacity>
+        </View>
     )
 };
 
@@ -15,10 +15,10 @@ const styles = StyleSheet.create ({
     listItem: {
         padding: 10,
         marginTop: 5,
-        backgroundColor: '#ccc',
+        backgroundColor: 'orange',
         borderColor: 'black',
         borderWidth: 1
       }
 })
 
-export default GoalItem;
+export default MarkedItem;
